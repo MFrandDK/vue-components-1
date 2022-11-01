@@ -6,6 +6,7 @@
 <!-- 3. Make a child component called ToyDisplay that will render the selected toy - so you have to pass it props -->
 <!-- 4. Make a new component - <ToyImage> that you will use to render images. It needs the url for the images as a prop and the name (for the alt-attribute) as a prop. -->
 <!-- 5. Style it with scoped styling and make it look and act like the finished version above -->
+<!-- Extra assignment: upload it to your mmd studentserver in a new folder and send the link to your teacher -->
 <!-- Extra assignment: figure out how to implement a method that triggers when you click the img in "ToyDisplay", that will make App.vue console.log("My child component has been clicked!"). So you need an event from a childcomponent to trigger another event on the parent component. You will probably have to google this :) -->
 
 <!-- Longer version -->
@@ -19,6 +20,7 @@
 <!-- 8. Create a new childcomponent: ToyImage.vue´in the components folder -->
 <!-- 9. Import, register and use the ToyImage component in ToyDisplay to show the images. So you will need to pass the src and alt text to the ToyImage component from the ToyDisplay component -->
 <!-- 10. Finally style the component like it is in the above example -->
+<!-- Extra assignment: upload it to your mmd studentserver in a new folder and send the link to your teacher -->
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
