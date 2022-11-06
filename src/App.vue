@@ -23,18 +23,38 @@
 <!-- Extra assignment: upload it to your mmd studentserver in a new folder and send the link to your teacher -->
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  
+  <div class="buttons">
+    <button v-for="toy in toys" :key="toy.id" @click="selectedToyId = toy.id">
+      {{ toy.name }}
+    </button>
+  </div>
+  <div class="SelectedToy" v-if="selectedToyId">
+    <ToyDisplay :toy="getSelectedToy"></ToyDisplay>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import toys from "@/assets/toys"
+import ToyDisplay from "./components/ToyDisplay.vue";
 
 export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
+    name: "App",
+    components: {
+      ToyDisplay,
+    },
+    data() {
+        return {
+            toys,
+            selectedToyId: undefined
+        };
+    },
+    computed: {
+        getSelectedToy() {
+            return this.toys.find(toy => toy.id === this.selectedToyId);
+        }
+    },
+    
 };
 </script>
 
